@@ -28,14 +28,14 @@ val = input("enter 1 to send message ")
 if val == 1 and uid is not 0:
 	msg = str(raw_input("message: "))
 	# set lval to the number of times the message has to be sent
-	lval = 1
+	lval = 50
 	for i in range(lval):
 		print "sending message"
 		# comment the section if you don't want to send emoji or image
 		client.sendMessage(msg, thread_id = uid, thread_type = ThreadType.USER)
-		client.sendLocalImage('/home/mandeep/shirley/2.jpg', message='caption', thread_id=uid, thread_type=ThreadType.USER)
+		client.sendLocalImage('/home/mandeep/1.jpg', message='caption', thread_id=uid, thread_type=ThreadType.USER)
 		# it vl send default emoji, you can also set as per your choice
-		client.sendEmoji(emoji=None, size=EmojiSize.LARGE, thread_id=uid, thread_type=ThreadType.USER)
+		# client.sendEmoji(emoji=None, size=EmojiSize.LARGE, thread_id=uid, thread_type=ThreadType.USER)
 else:
 	print "exiting..."
 
